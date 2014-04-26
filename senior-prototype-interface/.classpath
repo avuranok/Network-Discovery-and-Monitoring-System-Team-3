@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/user/Downloads/02.03.2014/jars/sqlite-jdbc-3.7.15-M1.jar"/>
+	<classpathentry kind="lib" path="/Users/user/Downloads/02.03.2014/jars/SNMP4J.jar/SNMP4J.jar"/>
+	<classpathentry kind="lib" path="/Users/user/Downloads/prefuse.jar"/>
+	<classpathentry kind="lib" path="/Users/user/Downloads/jsch-0.1.51.jar"/>
+	<classpathentry kind="lib" path="/Users/user/Downloads/02.03.2014/jars/snmp4j-agent-1.4.3.jar/snmp4j-agent-1.4.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

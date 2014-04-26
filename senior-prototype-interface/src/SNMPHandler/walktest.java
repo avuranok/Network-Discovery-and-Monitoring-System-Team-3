@@ -28,12 +28,21 @@ public class walktest
   public static void main(String[] args)
   {
 	  String output ="";
+<<<<<<< HEAD
     Address targetAddress = new UdpAddress("192.168.1.35"+"/161");
     
     OID targetOID         = new OID("1.3.6.1.2.1.31.1.1.1.6");
     
     //1.3.6.1.2.1.3.1.1.2
     //1.3.6.1.2.1.17.1.4.1.2
+=======
+    Address targetAddress = new UdpAddress("192.168.1.20"+"/161");
+    
+    OID targetOID         = new OID("1.3.6.1.2.1.17.7.1.4.3.1.5.109");
+    
+    //1.3.6.1.2.1.3.1.1.2-----HP getVlan-> 1.3.6.1.4.1.11.2.14.11.5.1.7.1.15.1.1.1==1.3.6.1.4.1.9.9.68.1.2.2.1
+    //1.3.6.1.2.1.17.1.4.1.2==1.3.6.1.4.1.9.9.46.1.3.1.1.2
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
     //1.3.6.1.4.1.9.9.46.1.3.1.1.2 - Active Vlans
     // OID targetOID         = new OID("1.3.6.1.4.1.9.9.23"); --- CDP
    // OID targetOID         = new OID("1.0.8802.1.1.2.1.4.1.1"); --- LLDP
@@ -95,6 +104,13 @@ public class walktest
         {
           System.out.println("targetOID.leftMostCompare() != 0)");
           finished = true;
+<<<<<<< HEAD
+=======
+          
+          
+          
+          //return null
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
         }
         else if (Null.isExceptionSyntax(vb.getVariable().getSyntax()))
         {

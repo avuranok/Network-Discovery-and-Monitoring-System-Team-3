@@ -15,6 +15,12 @@ import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+<<<<<<< HEAD
+=======
+import com.sun.j3d.utils.applet.MainFrame;
+
+import NDMSMain.frame1;
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 import prefuse.Constants;
 import prefuse.Display;
 import prefuse.Visualization;
@@ -42,6 +48,10 @@ import prefuse.util.PrefuseLib;
 import prefuse.visual.VisualItem;
 
 public class DrawTopology {
+<<<<<<< HEAD
+=======
+	
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 	private static final Schema DECORATOR_SCHEMA = PrefuseLib.getVisualItemSchema(); 
 	static { 
     	DECORATOR_SCHEMA.setDefault(VisualItem.INTERACTIVE, false); 
@@ -99,6 +109,10 @@ catch(Exception exp)
     Visualization vis = new Visualization();
     vis.add("graph", graph);
     
+<<<<<<< HEAD
+=======
+   
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 LabelRenderer nodeRenderer = new LabelRenderer("name", "type");
     nodeRenderer.setVerticalAlignment(Constants.BOTTOM);
     nodeRenderer.setHorizontalPadding(0);
@@ -120,11 +134,20 @@ LabelRenderer nodeRenderer = new LabelRenderer("name", "type");
 
     ColorAction nEdges = new ColorAction("graph.edges", VisualItem.STROKECOLOR,ColorLib.rgb(0, 200, 0));
    // nEdges.setDefaultColor(ColorLib.gray(100));
+<<<<<<< HEAD
     
+=======
+  	
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 
 
     // bundle the color actions
     ActionList draw = new ActionList();
+<<<<<<< HEAD
+=======
+    
+   
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
     Control hoverc = new ControlAdapter() {
 
     	public  void popup(boolean fra)
@@ -161,9 +184,18 @@ LabelRenderer nodeRenderer = new LabelRenderer("name", "type");
     	
     	 
     	}
+<<<<<<< HEAD
 
         public void itemEntered(VisualItem item, MouseEvent evt) {
          
+=======
+    	
+  
+
+        public void itemEntered(VisualItem item, MouseEvent evt) {
+        		
+        		
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
         		//JOptionPane.showMessageDialog(null, "test");
                 item.setFillColor(item.getStrokeColor());
                 item.setStrokeColor(ColorLib.rgb(0, 0, 0));
@@ -182,6 +214,10 @@ LabelRenderer nodeRenderer = new LabelRenderer("name", "type");
                 
             
         }
+<<<<<<< HEAD
+=======
+       
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
     }; 
     
     draw.add(new RepaintAction());
@@ -244,6 +280,11 @@ LabelRenderer nodeRenderer = new LabelRenderer("name", "type");
     vis.run("draw");
     vis.run("layout");
     vis.run("hoverc");
+<<<<<<< HEAD
+=======
+    
+    
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 
 }
 

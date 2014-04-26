@@ -115,6 +115,10 @@ public class LldpDiscovery {
 				
 				System.out.println("*********There is unknown device here!!!! ******");
 				
+<<<<<<< HEAD
+=======
+				
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

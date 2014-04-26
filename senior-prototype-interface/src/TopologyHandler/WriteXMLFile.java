@@ -28,7 +28,11 @@ public class WriteXMLFile {
 	static String ROUTER_IMAGE = "data/images/router.png";
 	static String SWITCH_IMAGE = "data/images/switch.png";
 	static String CLOUD_IMAGE = "data/images/Cloud.png";
+<<<<<<< HEAD
 	static String UNKNOWN_IMAGE = "data/images/switch.png";
+=======
+	static String UNKNOWN_IMAGE = "data/images/accessPoint.png";
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 	 
 	
 	public static void main() {
@@ -124,6 +128,12 @@ public class WriteXMLFile {
 		Element data2 = doc.createElement("data");
 		rootElement.appendChild(data2);
 		
+<<<<<<< HEAD
+=======
+		
+
+		
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 		deviceModel = ldp.deviceModel.get(0).trim();
 		System.out.println("DEvuce model"+deviceModel);
 		deviceType = sql.loadDevice(deviceModel);
@@ -143,6 +153,15 @@ public class WriteXMLFile {
 			deviceType = ROUTER_IMAGE;
 			
 		}
+<<<<<<< HEAD
+=======
+		else if (deviceType.equalsIgnoreCase("unkownDevice"))
+		{
+			deviceType = UNKNOWN_IMAGE;
+			
+		}
+		
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 		
 		
 		data2.setAttribute("key", "type");

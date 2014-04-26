@@ -42,26 +42,62 @@ public class CdpDiscovery {
 			System.out.println(out.ipler.size());
 			
 			try {
+<<<<<<< HEAD
 			//System Name
 			cdpDevicePid= SNMPManager.main("udp:"+out.ipler.get(i).toString()+"/161","1.0.8802.1.1.2.1.5.4795.1.2.7.0");
+=======
+			//System Name   1.3.6.1.2.1.47.1.1.1.1.13.1
+			cdpDevicePid= SNMPManager.main("udp:"+out.ipler.get(i).toString()+"/161","1.0.8802.1.1.2.1.5.4795.1.2.7.0");
+			System.out.println("11111 DevicePidDDDDDDDDDDDDDDDDDDDDDDDDDDD: "+ cdpDevicePid);
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 		
 			if(cdpDevicePid.startsWith("no"))
 			{
 				cdpDevicePid= SNMPManager.main("udp:"+out.ipler.get(i).toString()+"/161","1.3.6.1.2.1.47.1.1.1.1.13.1");
+<<<<<<< HEAD
 			}
 			
 				System.out.println("Device PID :"+cdpDevicePid);
 		
 			if(cdpDevicePid.trim().startsWith("WS"))
+=======
+				System.out.println("22222 DevicePidDDDDDDDDDDDDDDDDDDDDDDDDDDD: "+ cdpDevicePid);
+
+				if(cdpDevicePid.startsWith("no"))
+				{
+					cdpDevicePid="unkownDevice";
+					System.out.println("33333 DevicePidDDDDDDDDDDDDDDDDDDDDDDDDDDD: "+ cdpDevicePid);
+
+				}
+			}
+//			else
+//			{
+//				cdpDevicePid="unkownDevice";
+//				System.out.println("44444 DevicePidDDDDDDDDDDDDDDDDDDDDDDDDDDD: "+ cdpDevicePid);
+//
+//			}
+			
+				System.out.println("Device PID :"+cdpDevicePid);
+		
+			if(cdpDevicePid.trim().startsWith("WS") || cdpDevicePid.trim().equalsIgnoreCase("unkowndevice"))
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 			{
 				cdpSnmpCheck = SNMPManager.main("udp:"+out.ipler.get(i).toString()+"/161","1.3.6.1.4.1.9.9.23.1.3.4.0");
 
 				// To determine node count and Id s
 				cdpTopologyNodeId.add(cdpSnmpCheck);
 			
+<<<<<<< HEAD
 				
 				cdpDeviceModel.add(cdpDevicePid);
 				System.out.println("DevicePid : "+ cdpDevicePid);
+=======
+			
+				
+				
+				
+				System.out.println("DevicePidDDDDDDDDDDDDDDDDDDDDDDDDDDD: "+ cdpDevicePid);
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 			
 		
 			cdpTestWalk =  SNMPWalk.main(out.ipler.get(i).toString(),CDP_OID);
@@ -101,6 +137,19 @@ public class CdpDiscovery {
 					cdpHostInt.add(cdpTemp);
 					
 				}
+<<<<<<< HEAD
+=======
+				else if(equalSplitter[ind].startsWith("1.3.6.1.4.1.9.9.23.1.2.1.1.8")) //Neigbour Device PID
+				{
+					System.out.println("NEIGBOUR PID ELSE++++++++++++++++");
+					if(!cdpDeviceModel.contains(equalSplitter[1]))
+					{					
+						System.out.println("CONTAINS++++++++++++++++");
+
+						cdpDeviceModel.add(equalSplitter[1].substring(7,equalSplitter[1].length()));
+					}
+				}
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 				
 			}
 			}
@@ -161,6 +210,14 @@ public class CdpDiscovery {
 		{
 			System.out.println(cdpTopologyNodeId.get(i).toString());
 		}
+<<<<<<< HEAD
+=======
+		System.out.println("---DEVICE--");
+		for(int i=0; i<cdpDeviceModel.size();i++)
+		{
+			System.out.println(cdpDeviceModel.get(i).toString());
+		}
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 
 	}
 	

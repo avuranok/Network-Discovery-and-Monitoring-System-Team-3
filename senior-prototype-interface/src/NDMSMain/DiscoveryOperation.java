@@ -24,6 +24,17 @@ public class DiscoveryOperation {
 			}
 		}
 		
+<<<<<<< HEAD
+=======
+		for(int i=0 ; i<cdp.cdpDeviceModel.size();i++)
+		{
+			if(!ldp.deviceModel.contains(cdp.cdpDeviceModel.get(i)))
+			{
+				ldp.deviceModel.add(cdp.cdpDeviceModel.get(i));
+			}
+		}
+		
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 		for(int i=0; i< cdp.cdpHostName.size() ;i++)
 		{
 			if(!ldp.lldpHostName.contains(cdp.cdpHostName.get(i)))
@@ -33,7 +44,10 @@ public class DiscoveryOperation {
 				ldp.lldpHostInt.add(cdp.cdpHostInt.get(i));
 				ldp.lldpNeigName.add(cdp.cdpNeigName.get(i));
 				ldp.lldpNeigInt.add(cdp.cdpNeigInt.get(i));
+<<<<<<< HEAD
 				ldp.deviceModel.add(cdp.cdpDeviceModel.get(i));
+=======
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 				
 				count= Collections.frequency(cdp.cdpHostName,  cdp.cdpHostName.get(i).toString());
 				if(count >1)
@@ -44,6 +58,10 @@ public class DiscoveryOperation {
 						ldp.lldpHostInt.add(cdp.cdpHostInt.get(i));
 						ldp.lldpNeigName.add(cdp.cdpNeigName.get(i));
 						ldp.lldpNeigInt.add(cdp.cdpNeigInt.get(i));
+<<<<<<< HEAD
+=======
+
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 					}
 					
 				}
@@ -59,7 +77,11 @@ public class DiscoveryOperation {
 				ldp.lldpHostInt.add(cdp.cdpHostInt.get(i));
 				ldp.lldpNeigName.add(cdp.cdpNeigName.get(i));
 				ldp.lldpNeigInt.add(cdp.cdpNeigInt.get(i));
+<<<<<<< HEAD
 				ldp.deviceModel.add(cdp.cdpDeviceModel.get(i));
+=======
+
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 				
 				count= Collections.frequency(cdp.cdpHostName,  cdp.cdpHostName.get(i).toString());
 				if(count >1)
@@ -70,12 +92,40 @@ public class DiscoveryOperation {
 						ldp.lldpHostInt.add(cdp.cdpHostInt.get(i));
 						ldp.lldpNeigName.add(cdp.cdpNeigName.get(i));
 						ldp.lldpNeigInt.add(cdp.cdpNeigInt.get(i));
+<<<<<<< HEAD
+=======
+
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 					}
 					
 				}
 			}
 		}
 
+<<<<<<< HEAD
+=======
+		for(int i=0; i<ldp.lldpHostName.size();i++)
+		{
+			System.out.println("HOST NAME:    "+ ldp.lldpHostName.get(i));
+		}
+	
+		for(int i=0; i<ldp.lldpNeigName.size();i++)
+		{
+			System.out.println("NEIGH NAME:    "+ ldp.lldpNeigName.get(i));
+		}
+		for(int i=0; i<ldp.lldpNeigInt.size();i++)
+		{
+			System.out.println("NEIGH INT:    "+ ldp.lldpNeigInt.get(i));
+		}
+		for(int i=0; i<ldp.deviceModel.size();i++)
+		{
+			System.out.println("DEVICE MODEL:     "+ ldp.deviceModel.get(i));
+		}
+		for(int i=0; i<ldp.topologyNodeId.size();i++)
+		{
+			System.out.println("CIZIM NODE:    "+ ldp.topologyNodeId.get(i));
+		}
+>>>>>>> f1ac3f47c2f0110cdcac01a8c079561c3b447e26
 		
 		WriteXMLFile.main();
 
